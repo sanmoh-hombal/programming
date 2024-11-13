@@ -39,7 +39,7 @@ public class TwoNumberSum {
    *     if no such pair exists
    */
   @Contract(value = "_, _ -> new", pure = true)
-  public static Integer @NotNull [] BruteForce(Integer[] array, Integer targetSum) {
+  public static Integer @NotNull [] BruteForce(Integer @NotNull [] array, Integer targetSum) {
     // Iterate through the array and check for the sum of each pair of elements
     for (int i = 0; i < array.length; i++)
       // Iterate through the array starting from the next element
@@ -62,7 +62,7 @@ public class TwoNumberSum {
    *     if no such pair exists
    */
   @Contract(value = "_, _ -> new", pure = true)
-  public static Integer @NotNull [] LinearTime(Integer[] array, Integer targetSum) {
+  public static Integer @NotNull [] LinearTime(Integer @NotNull [] array, Integer targetSum) {
     // Create a hash set to store the elements of the array
     HashSet<Integer> set = new HashSet<>();
 
