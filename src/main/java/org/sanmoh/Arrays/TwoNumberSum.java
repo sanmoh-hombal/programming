@@ -1,5 +1,6 @@
 package org.sanmoh.Arrays;
 
+import java.util.HashSet;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
@@ -62,21 +63,21 @@ public class TwoNumberSum {
    */
   @Contract(value = "_, _ -> new", pure = true)
   public static Integer @NotNull [] LinearTime(Integer[] array, Integer targetSum) {
-    return new Integer[] {};
-  }
+    // Create a hash set to store the elements of the array
+    HashSet<Integer> set = new HashSet<>();
 
-  /**
-   * Finds two distinct integers in the input array that sum up to the target sum using an optimized
-   * approach. If such a pair is found, it returns them in an array. If no such pair exists, it
-   * returns an empty array.
-   *
-   * @param array the input array of distinct integers
-   * @param targetSum the target sum to find from the array elements
-   * @return an array containing the two integers that sum up to the target sum, or an empty array
-   *     if no such pair exists
-   */
-  @Contract(value = "_, _ -> new", pure = true)
-  public static Integer @NotNull [] Optimal(Integer[] array, Integer targetSum) {
+    // Iterate through the array
+    for (Integer num : array) {
+      // Calculate the difference between the target sum and the current element
+      Integer diff = targetSum - num;
+
+      // If the difference is present in the hash set, return the pair of elements
+      if (set.contains(diff)) return new Integer[] {diff, num};
+
+      // Add the current element to the hash set
+      set.add(num);
+    }
+
     return new Integer[] {};
   }
 }
