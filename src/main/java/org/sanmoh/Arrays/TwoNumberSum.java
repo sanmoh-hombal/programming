@@ -5,7 +5,7 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * <h1>Two Number Sum
+ * Two Number Sum
  *
  * <h2>Problem Statement
  *
