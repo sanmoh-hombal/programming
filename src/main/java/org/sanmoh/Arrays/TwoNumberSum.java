@@ -1,5 +1,8 @@
 package org.sanmoh.Arrays;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 /**
  * <h1>Two Number Sum
  *
@@ -24,4 +27,56 @@ package org.sanmoh.Arrays;
  * <pre>
  *     [-1, 11] // the numbers could be in reverse order
  */
-public class TwoNumberSum {}
+public class TwoNumberSum {
+  /**
+   * Finds two distinct integers in the input array that sum up to the target sum. If such a pair is
+   * found, it returns them in an array. If no such pair exists, it returns an empty array.
+   *
+   * @param array the input array of distinct integers
+   * @param targetSum the target sum to find from the array elements
+   * @return an array containing the two integers that sum up to the target sum, or an empty array
+   *     if no such pair exists
+   */
+  @Contract(value = "_, _ -> new", pure = true)
+  public static Integer @NotNull [] BruteForce(Integer[] array, Integer targetSum) {
+    // Iterate through the array and check for the sum of each pair of elements
+    for (int i = 0; i < array.length; i++)
+      // Iterate through the array starting from the next element
+      for (int j = i + 1; j < array.length; j++)
+        // If the sum of the pair of elements is equal to the target sum, return the pair
+        if (array[i] + array[j] == targetSum) return new Integer[] {array[i], array[j]};
+
+    // If no pair of elements sum up to the target sum, return an empty array
+    return new Integer[] {};
+  }
+
+  /**
+   * Finds two distinct integers in the input array that sum up to the target sum using a linear
+   * time algorithm. If such a pair is found, it returns them in an array. If no such pair exists,
+   * it returns an empty array.
+   *
+   * @param array the input array of distinct integers
+   * @param targetSum the target sum to find from the array elements
+   * @return an array containing the two integers that sum up to the target sum, or an empty array
+   *     if no such pair exists
+   */
+  @Contract(value = "_, _ -> new", pure = true)
+  public static Integer @NotNull [] LinearTime(Integer[] array, Integer targetSum) {
+    return new Integer[] {};
+  }
+
+  /**
+   * Finds two distinct integers in the input array that sum up to the target sum using an optimized
+   * approach. If such a pair is found, it returns them in an array. If no such pair exists, it
+   * returns an empty array.
+   *
+   * @param array the input array of distinct integers
+   * @param targetSum the target sum to find from the array elements
+   * @return an array containing the two integers that sum up to the target sum, or an empty array
+   *     if no such pair exists
+   */
+  @Contract(value = "_, _ -> new", pure = true)
+  public static Integer @NotNull [] Optimal(Integer[] array, Integer targetSum) {
+    return new Integer[] {};
+  }
+}
