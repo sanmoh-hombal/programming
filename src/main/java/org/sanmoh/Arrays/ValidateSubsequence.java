@@ -1,5 +1,8 @@
 package org.sanmoh.Arrays;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Validate Subsequence
  *
@@ -22,4 +25,35 @@ package org.sanmoh.Arrays;
  * <pre>
  *     true
  */
-public class ValidateSubsequence {}
+public class ValidateSubsequence {
+  /**
+   * Brute Force Algorithm
+   *
+   * <p>Determines if any element in the sequence is present in the array. This is a brute force
+   * approach so the time complexity is O(n^2)
+   *
+   * @param array the array to be searched
+   * @param sequence the sequence to be checked against the array
+   * @return true if any element in the sequence is found in the array, false otherwise
+   */
+  @Contract(pure = true)
+  public static @NotNull Boolean BruteForce(
+      Integer @NotNull [] array, Integer @NotNull [] sequence) {
+    return Boolean.FALSE;
+  }
+
+  /**
+   * Optimal Algorithm
+   *
+   * <p>Determines whether the second array is a subsequence of the first one using an optimized
+   * approach.
+   *
+   * @param array the array to be searched
+   * @param sequence the sequence to be checked against the array
+   * @return true if the sequence is a subsequence of the array, false otherwise
+   */
+  @Contract(pure = true)
+  public static @NotNull Boolean Optimal(Integer @NotNull [] array, Integer @NotNull [] sequence) {
+    return Boolean.FALSE;
+  }
+}
