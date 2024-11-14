@@ -8,7 +8,7 @@ public class TwoNumberSumTest {
   @Test
   public void testBruteForceWhereTargetSumExists() {
     Integer[] result = TwoNumberSum.BruteForce(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
-    assertEquals(2, result.length);
+    assertArrayEquals(new Integer[] {11, -1}, result);
   }
 
   @Test
@@ -20,7 +20,7 @@ public class TwoNumberSumTest {
   @Test
   public void testLinearWhereTargetSumExists() {
     Integer[] result = TwoNumberSum.Linear(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
-    assertEquals(2, result.length);
+    assertArrayEquals(new Integer[] {11, -1}, result);
   }
 
   @Test

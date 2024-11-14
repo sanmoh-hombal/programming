@@ -66,7 +66,7 @@ public class TwoNumberSum {
    *     if no such pair exists
    */
   @Contract(value = "_, _ -> new", pure = true)
-  public static Integer @NotNull [] Linear(Integer @NotNull [] array, Integer targetSum) {
+  public static Integer @NotNull [] Optimal(Integer @NotNull [] array, Integer targetSum) {
     // Create a hash set to store the elements of the array
     HashSet<Integer> set = new HashSet<>();
 
