@@ -18,14 +18,14 @@ public class TwoNumberSumTest {
   }
 
   @Test
-  public void testLinearTimeWhereTargetSumExists() {
-    Integer[] result = TwoNumberSum.LinearTime(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
+  public void testLinearWhereTargetSumExists() {
+    Integer[] result = TwoNumberSum.Linear(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
     assertEquals(2, result.length);
   }
 
   @Test
-  public void testLinearTimeWhereTargetSumDoesNotExist() {
-    Integer[] result = TwoNumberSum.LinearTime(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 30);
+  public void testLinearWhereTargetSumDoesNotExist() {
+    Integer[] result = TwoNumberSum.Linear(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 30);
     assertArrayEquals(new Integer[] {}, result);
   }
 }

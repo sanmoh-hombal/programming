@@ -30,8 +30,10 @@ import org.jetbrains.annotations.NotNull;
  */
 public class TwoNumberSum {
   /**
-   * Finds two distinct integers in the input array that sum up to the target sum. If such a pair is
-   * found, it returns them in an array. If no such pair exists, it returns an empty array.
+   * Brute Force Algorithm
+   *
+   * <p>Finds two distinct integers in the input array that sum up to the target sum. If such a pair
+   * is found, it returns them in an array. If no such pair exists, it returns an empty array.
    *
    * @param array the input array of distinct integers
    * @param targetSum the target sum to find from the array elements
@@ -52,7 +54,9 @@ public class TwoNumberSum {
   }
 
   /**
-   * Finds two distinct integers in the input array that sum up to the target sum using a linear
+   * Linear Time Algorithm
+   *
+   * <p>Finds two distinct integers in the input array that sum up to the target sum using a linear
    * time algorithm. If such a pair is found, it returns them in an array. If no such pair exists,
    * it returns an empty array.
    *
@@ -62,7 +66,7 @@ public class TwoNumberSum {
    *     if no such pair exists
    */
   @Contract(value = "_, _ -> new", pure = true)
-  public static Integer @NotNull [] LinearTime(Integer @NotNull [] array, Integer targetSum) {
+  public static Integer @NotNull [] Linear(Integer @NotNull [] array, Integer targetSum) {
     // Create a hash set to store the elements of the array
     HashSet<Integer> set = new HashSet<>();
 
