@@ -19,13 +19,13 @@ public class TwoNumberSumTest {
 
   @Test
   public void testLinearWhereTargetSumExists() {
-    Integer[] result = TwoNumberSum.Linear(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
+    Integer[] result = TwoNumberSum.Optimal(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
     assertArrayEquals(new Integer[] {11, -1}, result);
   }
 
   @Test
   public void testLinearWhereTargetSumDoesNotExist() {
-    Integer[] result = TwoNumberSum.Linear(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 30);
+    Integer[] result = TwoNumberSum.Optimal(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 30);
     assertArrayEquals(new Integer[] {}, result);
   }
 }
